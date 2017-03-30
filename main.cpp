@@ -15,7 +15,7 @@ int main()
     tab.Add(2);
     tab.Add(4);
     tab.Add(4);
-   // tab.cRemove();
+    tab.cRemove();
     tab.Print();
     return 0;
 }

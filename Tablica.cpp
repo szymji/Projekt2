@@ -20,7 +20,7 @@ void Tablica::Add(int value){
     tabSize ++;
 }
 
-//dodaje na it� pozycj�
+//dodaje na it¹ pozycjê
 void Tablica::Add(int value,int index){
 
     Element * temp = start;
@@ -57,7 +57,7 @@ void Tablica::indexRemove(int index){
     else{ start = start->next; delete(start); }
     tabSize--;
 }
-// wartosc lub przedzial
+// wartosc lub przedzial , bool = 1 usuwa tylko jedną liczbę o podanej wartosci
 void Tablica::valueRemove(int a,int b,bool c){
 
     Element * temp = start;
@@ -86,18 +86,19 @@ void Tablica::valueRemove(int a,int b,bool c){
 
 void Tablica::cRemove(){
 
-
+    Tablica pom;
     int n;
     Element * temp = start;
-    for(int i =0;i<tabSize;i++){
+    while(temp!=it){
 
         n = temp->value;
-
+        pom.Add(n);
         valueRemove(n);
-        Add(n,i);
         temp=temp->next;
 
     }
+
+    *(this)=pom;
 }
 
 void Tablica::Print(){
@@ -117,12 +118,12 @@ int Tablica::getSize(){
 
 Tablica Tablica::operator=(Tablica t){
 
-    for(int i=tabSize-1;i>0;i++){
-        (*this).indexRemove(i);}
+    for(int i=tabSize-1;i>0;i--){
+        indexRemove(i);}
     Element * temp = t.start;
     for(int i=0;i<t.tabSize;i++){
 
-        (*this).Add(temp->value);
+        Add(temp->value);
         temp = temp->next;
     }
     return *this;

@@ -10,3 +10,14 @@
 	<iostream>
 	"tablica.h"
 
+1490875514 source:c:\users\szymon\desktop\infa\projekt2\tablica.cpp
+	<cstddef>
+	<iostream>
+	"tablica.h"
+
+1490875514 c:\users\szymon\desktop\infa\projekt2\tablica.h
+
+1490874902 source:c:\users\szymon\desktop\infa\projekt2\main.cpp
+	<iostream>
+	"tablica.h"
+
