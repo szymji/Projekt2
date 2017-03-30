@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1490824580 source:c:\users\szymon\desktop\projekt 2\main.cpp
+	<iostream>
+	"tablica.h"
+
+1490821019 c:\users\szymon\desktop\projekt 2\tablica.h
+
+1490824570 source:c:\users\szymon\desktop\projekt 2\tablica.cpp
+	<cstddef>
+	<iostream>
+	"tablica.h"
+
